@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/iNotebook/static/css/main.9c2521cb.css",
+    "main.js": "/iNotebook/static/js/main.8a484965.js",
+    "static/media/video2.mp4": "/iNotebook/static/media/video2.83dc0519bcdd63ae2188.mp4",
+    "static/media/image4.png": "/iNotebook/static/media/image4.7347c6a73a85bc9cb563.png",
+    "static/media/image1.png": "/iNotebook/static/media/image1.ac805a142b22a93d8fb3.png",
+    "static/media/video.mp4": "/iNotebook/static/media/video.9f3e166b60b54981dfcf.mp4",
+    "static/media/image3.png": "/iNotebook/static/media/image3.f9f43e7a928243a8e49c.png",
+    "static/media/image2.png": "/iNotebook/static/media/image2.639d865d015de24927f2.png",
+    "index.html": "/iNotebook/index.html",
+    "main.9c2521cb.css.map": "/iNotebook/static/css/main.9c2521cb.css.map",
+    "main.8a484965.js.map": "/iNotebook/static/js/main.8a484965.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9c2521cb.css",
+    "static/js/main.8a484965.js"
+  ]
+}
