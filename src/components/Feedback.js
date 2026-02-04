@@ -102,7 +102,7 @@ const Feedback = ({ showAlert }) => {
               (e.target.style.background =
                 "linear-gradient(90deg, #2563eb, #1e40af)")
             }
-            onClick={() => (window.location.href = "/contact")}
+            onClick={() => (window.location.href = "#/contact")}
           >
             📩 Contact Us
           </button>
