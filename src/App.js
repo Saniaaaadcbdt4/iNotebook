@@ -78,8 +78,7 @@ function App() {
               />
             }
           />
-
-          <Route
+       <Route
             path="/addyournotehere"
             element={<Addyournotehere showAlert={showAlert} />}
           />
@@ -91,7 +90,7 @@ function App() {
     
   </Router>
 </NoteState>
-  
+ 
   );
 }
 
