@@ -15,7 +15,7 @@ const Home = () => {
       <div
         style={{
           background: "linear-gradient(to bottom right, #21377068, #020e20ff)",
-          minHeight: "100vh",
+          height: "100%",
           padding: "50px 20px",
           color: "#f8fafc",
           fontFamily: "Segoe UI, sans-serif",

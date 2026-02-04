@@ -22,11 +22,13 @@ import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import NoteDetail from "./components/noteDetail"; // lowercase match
 import Otp from "./components/Otp"; // lowercase match
+//import Splash from "./components/Splash";
 
 
 function App() {
   const [alert, setAlert] = useState(null);
   const [searchQuery, setSearchQuery] = useState(""); // 🔹 search state
+  //const [showSplash, setShowSplash] = useState(true);
 
   const showAlert = (message, type) => {
     setAlert({ msg: message, type: type });
@@ -35,8 +37,19 @@ function App() {
 
   return (
     <NoteState>
-      <Router>
-        <ScrollToTop />
+  <Router basename="/iNotebook">
+    <ScrollToTop />
+
+    {/* Splash overlay 
+    <Splash
+      visible={showSplash}
+      onFinish={() => setShowSplash(false)}
+      target="/"
+    />
+
+    {/* Only render Navbar + Routes when splash is hidden 
+    {!showSplash && (
+      <>*/}
         <Navbar setSearchQuery={setSearchQuery} />
         <Alert alert={alert} />
 
@@ -51,7 +64,6 @@ function App() {
           <Route path="/settings" element={<Settings showAlert={showAlert} />} />
           <Route path="/note/:id" element={<NoteDetail />} />
 
-          {/* Notes */}
           <Route
             path="/notes"
             element={<Notes showAlert={showAlert} searchQuery={searchQuery} />}
@@ -71,13 +83,15 @@ function App() {
             path="/addyournotehere"
             element={<Addyournotehere showAlert={showAlert} />}
           />
-          <Route path="/Otp" element={<Otp showAlert={showAlert} />} /> {/* ✔ lowercase path for URL */}
-
+          <Route path="/Otp" element={<Otp showAlert={showAlert} />} />
           <Route path="/feedback" element={<Feedback showAlert={showAlert} />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
-      </Router>
-    </NoteState>
+      
+    
+  </Router>
+</NoteState>
+  
   );
 }
 

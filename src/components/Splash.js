@@ -11,7 +11,7 @@ const Splash = ({ visible, onFinish, target = "/" }) => {
       // finish callback so parent can hide splash
       if (onFinish) onFinish();
       navigate(target);
-    }, 4000); // 3 seconds
+    }, 5000); // 3 seconds
     return () => clearTimeout(timer);
     // eslint-disable-next-line
   }, [visible]);
