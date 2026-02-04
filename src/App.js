@@ -21,12 +21,12 @@ import Profile from "./components/Profile";
 import Settings from "./components/Settings";
 import NoteDetail from "./components/noteDetail";
 import Otp from "./components/Otp";
-import Splash from "./components/Splash";
+//import Splash from "./components/Splash";
 
 function App() {
   const [alert, setAlert] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-  const [showSplash, setShowSplash] = useState(true);
+ // const [showSplash, setShowSplash] = useState(true);
 
   const showAlert = (message, type) => {
     setAlert({ msg: message, type: type });
@@ -38,16 +38,16 @@ function App() {
       <Router>
         <ScrollToTop />
 
-        {/* Splash overlay */}
+        {/* Splash overlay 
         <Splash
           visible={showSplash}
           onFinish={() => setShowSplash(false)}
           target="/" // HashRouter will handle this correctly
         />
 
-        {/* Only render Navbar + Routes when splash is hidden */}
+        {/* Only render Navbar + Routes when splash is hidden 
         {!showSplash && (
-          <>
+          <> */} 
             <Navbar setSearchQuery={setSearchQuery} />
             <Alert alert={alert} />
 
@@ -68,8 +68,8 @@ function App() {
               <Route path="/contact" element={<ContactUs />} />
               <Route path="/footer" element={<Footer />} />
             </Routes>
-          </>
-        )}
+          
+        
       </Router>
     </NoteState>
   );
