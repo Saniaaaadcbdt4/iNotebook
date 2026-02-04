@@ -1,20 +1,18 @@
 import React, { useEffect } from "react";
-import "./Splash.css"; // create this file (styles below)
-import { useNavigate } from "react-router-dom";
+import "./Splash.css";
 
 const Splash = ({ visible, onFinish, target = "/" }) => {
-  const navigate = useNavigate();
-
   useEffect(() => {
     if (!visible) return;
+
     const timer = setTimeout(() => {
-      // finish callback so parent can hide splash
       if (onFinish) onFinish();
-      navigate(target);
-    }, 5000); // 3 seconds
+      // target is just the route string, HashRouter handles # automatically
+      window.location.hash = target; 
+    }, 5000); // 5 seconds
+
     return () => clearTimeout(timer);
-    // eslint-disable-next-line
-  }, [visible]);
+  }, [visible, onFinish, target]);
 
   if (!visible) return null;
 
