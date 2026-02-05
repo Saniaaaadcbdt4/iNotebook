@@ -28,7 +28,7 @@ const AddNote = (props) => {
     <div
       style={{
         position: "relative",
-        minHeight: "100vh",
+        minHeight: "calc(100vh - 70px)",
         width: "100%", // ✅ full width
         //testing
         paddingTop: "70px",
