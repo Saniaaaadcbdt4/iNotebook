@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/iNotebook/static/css/main.9c2521cb.css",
-    "main.js": "/iNotebook/static/js/main.375f89f7.js",
+    "main.css": "/iNotebook/static/css/main.0353ac01.css",
+    "main.js": "/iNotebook/static/js/main.16789b1d.js",
     "static/media/video2.mp4": "/iNotebook/static/media/video2.83dc0519bcdd63ae2188.mp4",
     "static/media/image4.png": "/iNotebook/static/media/image4.7347c6a73a85bc9cb563.png",
     "static/media/image1.png": "/iNotebook/static/media/image1.ac805a142b22a93d8fb3.png",
@@ -9,11 +9,11 @@
     "static/media/image3.png": "/iNotebook/static/media/image3.f9f43e7a928243a8e49c.png",
     "static/media/image2.png": "/iNotebook/static/media/image2.639d865d015de24927f2.png",
     "index.html": "/iNotebook/index.html",
-    "main.9c2521cb.css.map": "/iNotebook/static/css/main.9c2521cb.css.map",
-    "main.375f89f7.js.map": "/iNotebook/static/js/main.375f89f7.js.map"
+    "main.0353ac01.css.map": "/iNotebook/static/css/main.0353ac01.css.map",
+    "main.16789b1d.js.map": "/iNotebook/static/js/main.16789b1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c2521cb.css",
-    "static/js/main.375f89f7.js"
+    "static/css/main.0353ac01.css",
+    "static/js/main.16789b1d.js"
   ]
 }
