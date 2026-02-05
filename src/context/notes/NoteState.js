@@ -49,18 +49,21 @@ const NoteState = (props) => {
 
 
   const addNote = async (title, description, tag) => {
-    const token = readToken();
-    if (!token) return;
+  const token = readToken();
+  if (!token) return;
 
-    const response = await fetch(`${host}/api/notes/addnotes`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "auth-token": token },
-      body: JSON.stringify({ title, description, tag }),
-    });
+  await fetch(`${host}/api/notes/addnotes`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "auth-token": token,
+    },
+    body: JSON.stringify({ title, description, tag }),
+  });
 
-    const json = await response.json();
-    if (json?._id) setNotes((prev) => [...prev, json]);
-  };
+  await getNotes(); // ✅ single source of truth
+};
+
 
   const editNote = async (id, title, description, tag) => {
     const response = await fetch(`${host}/api/notes/updatenote/${id}`, {

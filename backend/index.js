@@ -1,32 +1,31 @@
 require("dotenv").config();
-console.log("📧 Email User:", process.env.EMAIL_USER);
+const express = require("express");
+const cors = require("cors");
+const cToMongo = require("./database.js");
 
-const cToMongo = require('./database.js');
+// ✅ Connect to MongoDB Atlas
+cToMongo();
 
-// ✅ now calling the correct function
-
-const express = require('express');
-
-
-var cors = require('cors');
-cToMongo(); 
+// ✅ Initialize app
 const app = express();
-const port = 5000;
-app.use(cors()); // Enable CORS for all routes
-app.use(express.json()); // Middleware to parse JSON bodies
-//Available routes
-app.use("/api/auth", require("./routes/auth"))
-app.use("/api/notes", require("./routes/notes"))
+const port = process.env.PORT || 5000;
+
+// ✅ Middlewares
+app.use(cors());
+app.use(express.json());
+
+// ✅ Available routes
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/notes", require("./routes/notes"));
 app.use("/api/feedback", require("./routes/feedback"));
 app.use("/api/settings", require("./routes/settings"));
 
-
-
-
+// ✅ Test route
 app.get("/", (req, res) => {
   res.send("Hello Sania!");
 });
 
+// ✅ Start server
 app.listen(port, () => {
-  console.log(`iNotebook backend app listening on port ${port}`);
+  console.log(`🚀 iNotebook backend running on port ${port}`);
 });
