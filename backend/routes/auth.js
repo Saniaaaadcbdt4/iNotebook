@@ -23,7 +23,9 @@ router.post(
       return res.status(400).json({ success: false, errors: errors.array() });
 
     try {
-      const { name, password } = req.body;
+      const name = req.body.name.trim().toLowerCase();
+      const password = req.body.password.trim();
+
 
       let existingUser = await User.findOne({ name });
       if (existingUser)
@@ -61,7 +63,9 @@ router.post(
     let success = false;
 
     try {
-      const { name, password } = req.body;
+      const name = req.body.name.trim().toLowerCase();
+      const password = req.body.password.trim();
+
 
       const user = await User.findOne({ name });
       if (!user)
