@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import noteContext from "./noteContext";
 
 const NoteState = (props) => {
-  
- const host = import.meta.env.VITE_API_URL || "https://your-backend.onrender.com";
-
-
-
-
+  console.log("ENV:", import.meta.env);
+ const host = import.meta.env.VITE_API_URL;
 
 
   const [notes, setNotes] = useState([]);
