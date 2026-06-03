@@ -2,7 +2,7 @@
   "name": "inotebook",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://Saniaaaadcbdt4.github.io/iNotebook",  
+   
   "dependencies": {
     "bootstrap": "^5.3.7",
     "concurrently": "^9.1.2",
