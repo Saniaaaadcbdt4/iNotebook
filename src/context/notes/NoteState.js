@@ -3,7 +3,7 @@ import noteContext from "./noteContext";
 
 const NoteState = (props) => {
   
- const host =  import.meta.env.VITE_API_URL;
+ const host = import.meta.env.VITE_API_URL || "https://your-backend.onrender.com";
 
 
 
