@@ -7,7 +7,7 @@ const cToMongo = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log("✅ Connected to MongoDB Atlas successfully");
+    console.log("✅ Connected to MongoDB Compass successfully");
   } catch (e) {
     console.log("❌ Error connecting to MongoDB:", e.message);
   }

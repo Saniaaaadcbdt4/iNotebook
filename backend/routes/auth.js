@@ -44,7 +44,7 @@ router.post(
 
       res.json({ success: true, authtoken });
     } catch (error) {
-      console.error("SIGNUP ERROR:", error);
+      console.error("SIGNUP ERROR FULL:", error);
       res.status(500).json({ success: false, error: "Internal Server Error" });
     }
   }
@@ -53,13 +53,18 @@ router.post(
 /* =====================================================
    LOGIN
 ===================================================== */
-router.post(
-  "/login",
+router.post("/login",
   [
     body("name").exists(),
     body("password").exists(),
   ],
   async (req, res) => {
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ success: false, errors: errors.array() });
+    }
+
     let success = false;
 
     try {

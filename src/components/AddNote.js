@@ -25,21 +25,21 @@ const AddNote = (props) => {
 
   return (
 
-    <div
-      style={{
-        position: "relative",
-        minHeight: "calc(100vh - 70px)",
-        width: "100%", // ✅ full width
-        //testing
-        paddingTop: "70px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        margin: "0",
-        padding: "0",
-        overflow: "hidden",
-      }}
-      > 
+    
+     
+      <div
+  style={{
+    position: "relative",
+    minHeight: "calc(100vh - 70px)",
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "1rem",
+    overflow: "hidden",
+  }}
+>
+
     
       
       {/* Background Image with Overlay */}

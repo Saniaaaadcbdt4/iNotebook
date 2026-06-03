@@ -87,3 +87,4 @@ router.delete("/delete", fetchuser, async (req, res) => {
 });
 
 module.exports = router;
+//MONGO_URI=mongodb+srv://saniaaaaaahmed_db_user:MyStrongPassword123@cluster0.bqx18m7.mongodb.net/myProjectDB?appName=Cluster0
